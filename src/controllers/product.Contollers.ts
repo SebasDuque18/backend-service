@@ -60,7 +60,7 @@ export const updateProduct = async(req: Request, res: Response) => {
             id: parseInt(req.params.id)
             });
 
-        if (Product) {
+        if (product) {
            product.name = name ?? product.name;
            product.description = description ?? product.description;
             product.price = price ?? product.price;
@@ -85,13 +85,11 @@ export const deleteProduct = async(req: Request, res: Response) => {
     try {
         const product = await ProductRepository.findOneBy({
             id: parseInt(req.params.id)
-            });
+        });
 
-        if (Product) {
+        if (product) {
             await ProductRepository.remove(product);
-            res.json({
-                message: "Producto eliminado"
-            });     
+            res.json(product)     
         } else {
             res.status(404).json({
                 message: "Producto no encontrado."
