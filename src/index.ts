@@ -23,11 +23,11 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 AppDataSource.initialize()
 .then(() => {
     app.listen(() =>{
-        console.log(`Servidor corriendo en htpp://localhost:${PORT}\n`)
+        console.log(`Servidor corriendo en http://localhost:${PORT}\n`)
         console.log(`Endpoints:`)
-        console.log(`API Products htpp://localhost:${PORT}/api/products`)
+        console.log(`API Products http://localhost:${PORT}/api/products`)
         console.log(`Documentacio:`)
-        console.log(`Swagger en htpp://localhost:${PORT}/api-docs`);
+        console.log(`Swagger en http://localhost:${PORT}/api-docs`);
         
     });
 })

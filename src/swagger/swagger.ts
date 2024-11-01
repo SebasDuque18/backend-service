@@ -10,7 +10,7 @@ const swaggerOptions: Options = {
         },
         servers: [
             {
-                url: "htpp://localhost:300/"
+                url: "http://localhost:300/"
             }
         ]
     },
