@@ -1,4 +1,4 @@
-import swaggerJSDoc, { Options } from "swagger-jsdoc";
+import swaggerJsdoc, { Options } from "swagger-jsdoc";
 
 const swaggerOptions: Options = {
     definition: {
@@ -10,7 +10,7 @@ const swaggerOptions: Options = {
         },
         servers: [
             {
-                url: "http://localhost:300/"
+                url: "http://localhost:3000/"
             }
         ]
     },
@@ -19,6 +19,6 @@ const swaggerOptions: Options = {
     ]
 };
 
-const swaggerSpec = swaggerJSDoc(swaggerOptions);
+const swaggerSpec = swaggerJsdoc(swaggerOptions);
 
 export default swaggerSpec

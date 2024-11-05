@@ -1,7 +1,7 @@
 import express, { Application } from "express";
 import cors from "cors";
 import { AppDataSource } from "./data-source";
-import router from "./routers/product.Routes";
+import router from "./routers/productRoutes";
 import swaggerSpec from "./swagger/swagger";
 import swaggerUi from "swagger-ui-express";
 
@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json());
 
 //rutas
-app.use("/API/", router); //ruta de productos
+app.use("/API/products", router); //ruta de productos
 
 //documentacion swagger
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
